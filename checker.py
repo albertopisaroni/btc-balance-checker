@@ -5,6 +5,10 @@ from moneywagon import AddressBalance
 from time import sleep
 from urllib.request import urlopen
 
+def wrongwallet:
+    print("Wallet address is wrong.")
+    exit(1)
+
 def alladdr(addr):
     global balanceout
     total = AddressBalance().action('btc', addr)
@@ -29,8 +33,9 @@ def main():
         except:
             alladdr(addr)
     except:
-        print("Wallet address is wrong.")
-        exit(1)
+        wrongwallet()
+    if ("None" in balanceout):
+        wrongwallet()
     print("     You have found :>  " + balanceout + " BTC")
 
 if __name__ == '__main__':
