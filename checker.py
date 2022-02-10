@@ -9,12 +9,12 @@ def wrongwallet:
     print("Wallet address is wrong.")
     exit(1)
 
-def alladdr(addr):
+def slowsrc(addr):
     global balanceout
     total = AddressBalance().action('btc', addr)
     balanceout= str(total)
 
-def nobc1addr(addr):
+def fastsrc(addr):
     global balanceout
     satoshis = 1e+8
     htmlfile = urlopen("https://blockchain.info/address/%s?format=json" % addr, timeout = 10)
@@ -29,9 +29,9 @@ def main():
     addr = input("Enter a BTC Address :>  ")
     try:
         try:
-            nobc1addr(addr)
+            fastsrc(addr)
         except:
-            alladdr(addr)
+            slowsrc(addr)
     except:
         wrongwallet()
     if ("None" in balanceout):
