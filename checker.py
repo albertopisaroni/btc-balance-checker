@@ -18,7 +18,6 @@ def nobc1addr(addr):
     btc_tokens = float( re.search( r'%s":(\d+),' % 'final_balance', htmltext ).group(1) )
     balanceout = str(btc_tokens/satoshis)
 
-
 def main():
     print("\n-----------------------------------------------------------")
     print("            albertopisaroni/btc-balance-checker")
