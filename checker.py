@@ -13,7 +13,6 @@ def alladdr(addr):
 def nobc1addr(addr):
     global balanceout
     satoshis = 1e+8
-    
     htmlfile = urlopen("https://blockchain.info/address/%s?format=json" % addr, timeout = 10)
     htmltext = htmlfile.read().decode('utf-8')
     btc_tokens = float( re.search( r'%s":(\d+),' % 'final_balance', htmltext ).group(1) )
@@ -21,13 +20,10 @@ def nobc1addr(addr):
 
 
 def main():
-
     print("\n-----------------------------------------------------------")
     print("            albertopisaroni/btc-balance-checker")
     print("-----------------------------------------------------------\n")
-
     addr = input("Enter a BTC Address :>  ")
-
     try:
         try:
             nobc1addr(addr)
@@ -36,7 +32,6 @@ def main():
     except:
         print("Wallet address is wrong.")
         exit(1)
-
     print("     You have found :>  " + balanceout + " BTC")
 
 if __name__ == '__main__':
