@@ -1,1 +1,1 @@
-# bitcoin-balance-checker
+# btc-balance-checker
