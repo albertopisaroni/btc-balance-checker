@@ -5,7 +5,7 @@ from moneywagon import AddressBalance
 from time import sleep
 from urllib.request import urlopen
 
-def wrongwallet:
+def wrongwallet():
     print("Wallet address is wrong.")
     exit(1)
 
