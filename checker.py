@@ -23,9 +23,9 @@ def fastsrc(addr):
     balanceout = str(btc_tokens/satoshis)
 
 def main():
-    print("\n------------------------------------------------------------")
-    print("            albertopisaroni/btc-balance-checker")
-    print("------------------------------------------------------------\n")
+    print("\n-----------------------------------------------------------")
+    print("            albertopisaroni/btc-balance-checkerzs")
+    print("-----------------------------------------------------------\n")
     addr = input("Enter a BTC Address :>  ")
     try:
         try:
