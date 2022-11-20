@@ -24,7 +24,7 @@ def fastsrc(addr):
 
 def main():
     print("\n-----------------------------------------------------------")
-    print("            albertopisaroni/btc-balance-checkerzs")
+    print("            albertopisaroni/btc-balance-checker")
     print("-----------------------------------------------------------\n")
     addr = input("Enter a BTC Address :>  ")
     try:
